@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+}
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 77vh;
+    margin-top: 10vh;
+}
+
+
+.heromainTextDiv {
+    padding: 10px 200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.heromainTextDiv h1{
+    font-size: 3rem;
+    margin-bottom: 2vw;
+}
+
+.heromainTextDiv p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: hsl(0 , 0%, 60%);
+    margin-bottom: 2vw;
+}
+
+.hero img{
+    width: 50vw;
+    display: flex;
+
+}
+
+.joinHero button{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background: rgb(143,141,255);
+    background: linear-gradient(0deg, rgba(143,141,255,1) 2%, rgba(184,114,196,1) 100%);
+    color: white;
+    transition: all 0.3s;
+}
+
+.joinhero button a{
+    text-decoration: none;
+    color: white;
+}
+.joinHero button:hover{
+    cursor: pointer;
+    scale: 1.06;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    border-top: 1px solid hsla(0, 0%, 0%, 0.144);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.144);
+    padding: 20px 0;
+}
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 300px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 10px;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.Container i {
+    margin-bottom: 10px; 
+    color: hsl(0 , 0%, 80%);;
+}
+.Container p {
+    margin: 5px 0; 
+    color: hsl(0 , 0%, 70%);;
+}
+
+.secondSecDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    text-align: center;
+    
+}
+.allDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    padding: 10px;
+    
+}
+
+.allDiv i{
+    font-size: 5rem;
+    margin: 0 7vw;
+    background-color: hsl(0, 0%, 95%);
+    padding: 100px;
+    border-radius: 150px;
+}
+.secHeromainTextDiv{
+    width: 35vw;
+}
+
+
+.secHeromainTextDiv h1{
+    margin-bottom: 5vh;
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, black 0%, rgb(232, 193, 252) 50%, black 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: color-animation 4s linear infinite;
+}
+
+.secHeromainTextDiv p{
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+@keyframes color-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+@media (max-width:750px) {
+
+    .allDiv {
+        width: 100vw;; 
+      margin: 10px auto; /* center the divs */
+      display: block;
+      text-align: center; /* center content inside the divs */
+    }
+
+    .secHeromainTextDiv{
+        width: 100vw;
+        padding: 20px;
+
+    }
+    .secHeromainTextDiv h1{
+        font-size: 2rem;
+        margin-top: 4vh;
+    }
+    .secHeromainTextDiv p{
+        font-size: 0.7rem;
+    }
+
+
+
+  .mainContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero{
+        flex-direction: column;
+    }
+    .heromainTextDiv{
+        padding: 0px;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .heromainTextDiv h1{
+        font-size: 2.2rem;
+        margin-bottom: 5vh;
+        margin-top: 2vh;
+    }
+
+    .heromainTextDiv p{
+        font-size: 1.2rem;
+        margin-bottom: 5vh;
+    }
+    .ggp{
+        font-size: 0.3rem;
+    }
+ 
+}
+
+#cookies {
+    background-color: #f9f9f9; /* Slightly off-white for contrast */
+    color: #333; /* Dark grey for text */
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 0.9rem;
+    animation: shiftLeft 2s 1;
+}
+
+#cookies p {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: hsla(0, 0%, 33%, 0.541); /* Softer color for the text */
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+#btnDiv button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+    transition: all 0.3s;
+}
+#btnDiv button:hover {
+    opacity: 0.8;
+}
+
+@keyframes shiftLeft {
+    from{
+        transform: translateX(400px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+
+    <style>
+            * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+        body {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0; 
+        }
+        .form-container{
+            margin-top: 10vh;
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            justify-content: center;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            animation: bounce 2s;
+            animation-delay: 1s;
+            
+
+        }
+
+        form h3 {
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(21, 10, 10), rgb(58, 58, 58), rgb(207, 156, 218), rgb(255, 255, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+
+        form input, form textarea {
+            border: none;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: hsl(0, 0%, 94%);
+            font-size: 1rem;
+        }
+
+        form textarea {
+            width: 100%; 
+            max-width: 600px; 
+            box-sizing: border-box;
+        }
+
+        
+        form button {
+            padding: 15px;
+            background: linear-gradient(120deg,rgb(21, 10, 10),rgb(207, 156, 218));
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        form button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 712px) {
+            body{
+                height: 120vh;
+            }
+        }
+        
+
+
+    </style>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+    publicKey: "ex9XUG1jbtDMPznE5",
+    });
+    })();
+    </script>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="cursor"></div>
+    <div id="navbar-placeholder"></div>
+    <div class="form-container">
+        <form onsubmit="sendEmail(); this.reset(); return false;">
+            <h3>Get In Touch?</h3>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+   
+    <div id="footer"></div>
+    <script src="email.js"></script>
+    <script src="import.js"></script>
+</body>
+</html>
+
+
+

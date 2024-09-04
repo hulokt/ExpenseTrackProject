@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <link rel="stylesheet" href="joinNow.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+    publicKey: "ex9XUG1jbtDMPznE5",
+    });
+    })();
+    </script>
+</head>
+<body>
+    <div id="navbar"></div>
+        <div class="form-wrapper">
+            <form id="form" onsubmit="sendEmail(); this.reset(); return false;">
+                <h3>Create an account</h3>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <button type="submit">Create Account</button>
+                <p style="margin-top: 10px;">Already have an account? <a href="joinNow.html">My account</a></p>
+            </form>
+        </div>
+    <section id="signUpSuccses">
+        <div><h3 id="h3Name">Hello, Khaled</h3></div>
+        <div id="profileCard">
+            <div class="input-section">
+                <div>
+                    <label for="category-select">Category:</label>
+                    <select id="category-select">
+                        <option value="Food & beverage">Food & beverage</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Subscriptions">Subscriptions</option>
+                        <option value="Gifts & Donations">Gifts & Donations</option>
+                        <option value="Household Items">Household Items</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Fitness & Gym">Fitness & Gym</option>
+                        <option value="Pet Care">Pet Care</option>
+                        <option value="Entertainment & Leisure">Entertainment & Leisure</option>
+                        <option value="Childcare">Childcare</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="amount-input">Amount:</label>
+                    <input type="number" id="amount-input" placeholder="Type an amount">
+                </div>
+                <div>
+                    <label for="date-input">Date:</label>
+                    <input type="date" id="date-input">
+                </div>
+                <button id="add-btn" class="mybtn" style="width: 200px;">Add</button>
+            </div>
+        </div>
+        <div class="infoDiv">
+            <div id="card">
+                <div class="cardImgDiv"><button id="openModalBtn"><i class="fa-regular fa-pen-to-square"></i></button></div>
+                <div>
+                    <h3>Monthly Income</h3>
+                    <p id="Income">$0</p>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <input placeholder="Type Your monthly Income" type="number" id="incomeInput">
+                      <button class="save-btn" onclick="editIncome()">Save</button>
+                    </div>
+                  </div>
+            </div>
+            
+
+            <div id="card">
+                <div class="cardImgDiv"><i class="fa-solid fa-dollar-sign" style="font-size: 1.2rem;"></i></div>
+                <div>
+                    <h3>Total expenses</h3>
+                    <p id="total" style="color: tomato;">$0</p>
+                </div>
+            </div>
+            <div id="card">
+                
+                <div class="cardImgDiv"><i class="fa-solid fa-wallet" style="font-size: 1.2rem;"></i></div>
+                <div>
+                    <h3>Current Balance</h3>
+                    <p id="currentBalance"  style="color: rgb(122, 170, 128);">$0</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="displayDataDiv">
+            <div class="expenses-list" id="tableDiv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-table-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total:</td>
+                            <td id="total-amount"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="piechart"></div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="import.js"></script>
+    <script src="Joinnow.js"></script>
+</body>
+</html>

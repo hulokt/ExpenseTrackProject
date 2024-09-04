@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            padding: 5px 50px;
+            top: 0;
+            left: 0;
+            transition: background-color 0.3s ease;
+            background-color: hsl(0, 0%, 10%);
+            position: fixed;
+            z-index: 1000000;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            padding: 0.1em;
+            line-height: 1.2;
+            height: 5vh;
+            align-items: center;
+        }
+        .logo a{
+            text-decoration: none;
+            font-size: 1.6em; 
+            color: white;
+        }
+
+        .logo img{
+            height: 100%;
+            width: 100%;
+        }
+
+        .imgdiv{
+            height: 5vh;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+            color: hsl(0, 0%, 80%);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        nav ul li a:hover {
+            color: hsl(0, 0%, 60%);
+        }
+
+        .join button{
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            background: rgb(143,141,255);
+            background: linear-gradient(0deg, rgba(143,141,255,1) 2%, rgba(184,114,196,1) 100%);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .join button a{
+            text-decoration: none;
+            color: white;
+        }
+        .join button:hover{
+            cursor: pointer;
+            scale: 1.06;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+            transition: all 0.3s;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 942px) {
+            .join{
+                display: none;
+            }
+            .logo a{
+            font-size: 1.3rem; 
+        }
+        .logo img{
+            height: 100%;
+            width: 100%;
+        }
+        #navbar {
+            padding: 10px;
+        }
+
+        .imgdiv{
+            height: 30px;
+            width: 40px;
+        }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: hsl(0, 0%, 10%);
+                padding: 20px 0;
+                border-top: 1px solid hsla(0, 0%, 0%, 0.144);
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links li a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <div class="imgdiv">
+                <a href=""><img src="Screenshot_2024-08-30_164925-removebg-preview (1).png" alt=""></a>
+            </div>
+            <div>
+                <a href="index.html">KhaledBank</a>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="email.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="activate()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="join">
+            <a href="joinNow.html"><button>My account</button></a>
+        </div>
+    </nav>
+    <script>
+        
+    </script>
+</body>
+</html>
